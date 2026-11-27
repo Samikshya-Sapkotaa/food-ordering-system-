@@ -1,0 +1,498 @@
+/* ============================================================
+Foodie Corner – Global Responsive Utilities
+Breakpoints: 1024px (tablet), 768px (large mobile), 480px (mobile)
+============================================================ */
+
+/* Reset / base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============================================================
+CUSTOMER APP (fc- prefix) — RESPONSIVE
+============================================================ */
+
+
+/* Topnav mobile */
+@media (max-width: 768px) {
+
+    .fc-topnav-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .fc-brand-logo {
+        font-size: 16px;
+    }
+
+    .fc-location-picker {
+        max-width: calc(100% - 120px);
+        overflow: hidden;
+    }
+
+    .fc-nav-search {
+        display: none;
+    }
+
+    .fc-nav-actions {
+        margin-left: 0;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    .fc-nav-link span:last-child {
+        display: none;
+    }
+
+    .fc-cart-btn span:first-child {
+        font-size: 18px;
+    }
+
+    .fc-page-content {
+        padding: 16px 14px;
+    }
+
+
+    .fc-restaurant-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-home-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-filter-sidebar {
+        display: none;
+    }
+
+
+    .fc-menu-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-menu-cart-panel {
+        display: none;
+    }
+
+
+    .fc-checkout-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-tracking-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-profile-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-cart-drawer {
+        max-width: 100% !important;
+    }
+
+
+    .fc-cuisine-chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .fc-restaurant-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .fc-page-content {
+        padding: 12px 10px;
+    }
+
+
+    .fc-stat-cards-row {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+}
+
+
+
+/* ============================================================
+ADMIN PANEL (ap- prefix)
+============================================================ */
+
+
+@media (max-width: 1024px) {
+
+
+    .ap-sidebar {
+        width: 60px;
+        min-width: 60px;
+    }
+
+
+    .ap-brand-title,
+    .ap-brand-subtitle,
+    .ap-nav-item span:not(.ap-nav-icon),
+    .ap-nav-section-label,
+    .ap-role-label,
+    .ap-role-select,
+    .ap-role-switcher-box > div:first-child {
+
+        display: none !important;
+
+    }
+
+
+
+    .ap-sidebar-brand {
+        padding:14px 10px;
+        justify-content:center;
+    }
+
+
+    .ap-brand-logo {
+        margin:0;
+    }
+
+
+    .ap-nav-menu {
+        padding:8px 6px;
+    }
+
+
+    .ap-nav-item {
+        padding:10px;
+        justify-content:center;
+        gap:0;
+        border-left:none !important;
+        padding-left:10px !important;
+    }
+
+
+    .ap-nav-item.active {
+        border-left:3px solid #ea580c;
+        border-radius:8px;
+    }
+
+
+    .ap-role-switcher-box {
+        padding:10px 6px;
+    }
+
+
+    .ap-stats-grid {
+        grid-template-columns:repeat(3,1fr) !important;
+    }
+
+
+    .ap-dashboard-grid {
+        grid-template-columns:1fr !important;
+    }
+
+
+    .ap-main {
+        padding:20px 16px;
+    }
+
+
+    .ap-topbar {
+        padding:0 16px;
+    }
+
+}
+
+
+
+@media (max-width:768px) {
+
+
+    .ap-sidebar {
+
+        position:fixed;
+        left:-100%;
+        width:260px;
+        min-width:260px;
+        z-index:999;
+        transition:left .3s ease;
+        height:100vh;
+
+    }
+
+
+
+    .ap-sidebar.mobile-open {
+        left:0;
+    }
+
+
+
+    .ap-sidebar.mobile-open .ap-brand-title,
+    .ap-sidebar.mobile-open .ap-brand-subtitle,
+    .ap-sidebar.mobile-open .ap-nav-item span:not(.ap-nav-icon),
+    .ap-sidebar.mobile-open .ap-nav-section-label,
+    .ap-sidebar.mobile-open .ap-role-label,
+    .ap-sidebar.mobile-open .ap-role-select {
+
+        display:block !important;
+
+    }
+
+
+
+    .ap-sidebar.mobile-open .ap-nav-item {
+
+        justify-content:flex-start;
+        gap:11px;
+        padding:10px 14px;
+
+    }
+
+
+
+    .ap-stats-grid {
+
+        grid-template-columns:repeat(2,1fr) !important;
+
+    }
+
+
+
+    .ap-topbar-breadcrumb span:first-child,
+    .ap-topbar-breadcrumb span:nth-child(2) {
+
+        display:none;
+
+    }
+
+
+
+    .ap-content-shell {
+
+        width:100%;
+
+    }
+
+}
+
+
+
+
+@media (max-width:480px) {
+
+
+    .ap-stats-grid {
+
+        grid-template-columns:1fr !important;
+
+    }
+
+
+    .ap-stat-card {
+
+        padding:14px;
+
+    }
+
+
+    .ap-stat-val {
+
+        font-size:22px !important;
+
+    }
+
+
+    .ap-main {
+
+        padding:14px 12px;
+
+    }
+
+
+    .ap-topbar-btn {
+
+        display:none;
+
+    }
+
+
+    .ap-topbar-actions {
+
+        gap:8px;
+
+    }
+
+}
+
+
+
+/* ============================================================
+NAVBAR (legacy)
+============================================================ */
+
+
+@media (max-width:768px) {
+
+
+    .navbar {
+
+        flex-wrap:wrap;
+        padding:10px 14px;
+
+    }
+
+
+    .nav-links {
+
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:6px;
+
+    }
+
+}
+
+
+
+/* ============================================================
+KITCHEN DASHBOARD
+============================================================ */
+
+
+@media (max-width:768px) {
+
+
+    .kd-order-grid {
+
+        grid-template-columns:1fr !important;
+
+    }
+
+
+    .kd-topbar {
+
+        flex-wrap:wrap;
+        height:auto;
+        padding:10px 14px;
+        gap:8px;
+
+    }
+
+}
+
+
+
+
+/* ============================================================
+TABLES
+============================================================ */
+
+
+@media (max-width:768px) {
+
+
+    .ap-table-card {
+
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+
+    .ap-table {
+
+        min-width:640px;
+
+    }
+
+
+    .ap-table-toolbar {
+
+        flex-direction:column;
+        align-items:stretch;
+
+    }
+
+
+    .ap-search-input {
+
+        min-width:100%;
+
+    }
+
+}
+
+
+
+/* ============================================================
+UTILITIES
+============================================================ */
+
+
+.show-mobile {
+
+    display:none;
+
+}
+
+
+
+@media (max-width:768px) {
+
+
+    .hide-mobile {
+
+        display:none !important;
+
+    }
+
+
+    .show-mobile {
+
+        display:block !important;
+
+    }
+
+}
+
+
+
+/* Smooth transitions */
+
+* {
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+
+button,
+a {
+
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+
+}
